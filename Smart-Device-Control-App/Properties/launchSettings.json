@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Smart-Device-Control-App": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
