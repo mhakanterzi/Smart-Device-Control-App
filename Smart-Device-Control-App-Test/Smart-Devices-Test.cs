@@ -181,5 +181,64 @@ namespace Smart_Device_Control_App.Tests
         }
     }
 
+    public class ElectronicDevicesTest
+    {
+        DeviceAction deviceAction;
+        [Fact]
+        public void ElectronicDevicesOn()
+        {
+            ElectronicDevices pc = new ElectronicDevices("Computer");
 
+            deviceAction = pc.TurnOn;
+            deviceAction();
+            Assert.True(pc.IsOn);
+        }
+
+        [Fact]
+        public void ElectronicDevicesOff()
+        {
+            ElectronicDevices pc = new ElectronicDevices("Computer");
+
+            deviceAction = pc.TurnOff;
+            deviceAction();
+            Assert.False(pc.IsOn);
+        }
+    }
+
+    public class ThermostatTest
+    {
+        DeviceAction deviceAction;
+        [Fact]
+        public void ThermostatOn()
+        {
+            Thermostat thermostat = new Thermostat("Home");
+
+            deviceAction = thermostat.TurnOn;
+            deviceAction();
+
+            Assert.True(thermostat.IsOn);
+        }
+
+        [Fact]
+        public void SetThermostat()
+        {
+            Thermostat thermostat = new Thermostat("Home");
+
+            Func<int, int> openActions = thermostat.SetDegree;
+            int currentDegree = openActions(26);
+
+            Assert.Equal(currentDegree, 26);
+        }
+
+        [Fact]
+        public void ThermostatOff()
+        {
+            Thermostat thermostat = new Thermostat("Home");
+
+            deviceAction = thermostat.TurnOff;
+            deviceAction();
+
+            Assert.False(thermostat.IsOn);
+        }
+    }
 }

@@ -12,7 +12,18 @@ namespace Smart_Device_Control_App
         static void Main(string[] args)
         {
 
+            ElectronicDevices start = new ElectronicDevices("Computer");
 
+            DeviceAction deviceAction;
+
+            deviceAction = start.TurnOn;
+            deviceAction();
+
+
+            Thermostat degree = new Thermostat("Home");
+
+            Func<int, int> openActions = degree.SetDegree;
+            int currentDegree = openActions(26);
         }
     }
 }
