@@ -11,11 +11,8 @@ namespace Smart_Device_Control_App
     {
         static void Main(string[] args)
         {
-            LigtsTest ligtsTest = new LigtsTest();
-            ligtsTest.Run();
 
-            AirPurifierTest airPurifier = new AirPurifierTest();
-            airPurifier.Run();
+
         }
     }
 }

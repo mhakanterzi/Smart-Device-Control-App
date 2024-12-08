@@ -11,8 +11,10 @@ namespace Smart_Device_Control_App.Devices
         public int Brightness { get; set; }
         public string Color {  get; set; }
 
-        public Func<int, int> SetBrightness;
-        public Action<string> SetColor;
+        public Func<int, int> SetBrightness; //Func for set brightness 
+        public Action<string> SetColor; //Action for set lights color
+
+        //Constructer
         public Lights(string name) : base(name)
         {
             Brightness = 100;
