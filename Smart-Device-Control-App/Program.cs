@@ -1,4 +1,6 @@
-﻿using Smart_Device_Control_App.Devices;
+﻿using Smart_Device_Control_App.Controller;
+using Smart_Device_Control_App.Devices;
+using Smart_Device_Control_App.Modes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +13,11 @@ namespace Smart_Device_Control_App
     {
         static void Main(string[] args)
         {
+            NightModeController controller = new NightModeController();
+            controller.ApplyNightMode();
 
-            ElectronicDevices start = new ElectronicDevices("Computer");
-
-            DeviceAction deviceAction;
-
-            deviceAction = start.TurnOn;
-            deviceAction();
-
-
-            Thermostat degree = new Thermostat("Home");
-
-            Func<int, int> openActions = degree.SetDegree;
-            int currentDegree = openActions(26);
+            CinemaModeController run = new CinemaModeController();
+            run.ApplyCinemaMode();
         }
     }
 }

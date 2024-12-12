@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart-Device-Control-App", "Smart-Device-Control-App\Smart-Device-Control-App.csproj", "{10704470-8D48-473B-92A4-80F0A022DF26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart-Device-Control-App.Test", "Smart-Device-Control-App-Test\Smart-Device-Control-App.Test.csproj", "{814F96F9-20FF-46A9-8555-B8E7D7A1B0AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smart-Device-Control-App.Test", "Smart-Device-Control-App-Test\Smart-Device-Control-App.Test.csproj", "{814F96F9-20FF-46A9-8555-B8E7D7A1B0AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

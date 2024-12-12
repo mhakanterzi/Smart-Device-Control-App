@@ -241,4 +241,38 @@ namespace Smart_Device_Control_App.Tests
             Assert.False(thermostat.IsOn);
         }
     }
+
+    public class RobotCleanerTest
+    {
+        DeviceAction deviceAction;
+
+        [Fact]
+        public void RobotCleanerOn()
+        {
+            RobotCleaner robotCleaner = new RobotCleaner("Robot Cleaner");
+
+            deviceAction = robotCleaner.TurnOn;
+            deviceAction();
+            Assert.True(robotCleaner.IsOn);
+        }
+
+        [Fact]
+        public void RobotCleanerOff()
+        {
+            RobotCleaner robotCleaner = new RobotCleaner("Robot Cleaner");
+
+            deviceAction = robotCleaner.TurnOff;
+            deviceAction();
+            Assert.False(robotCleaner.IsOn);
+        }
+
+        [Fact]
+        public void RobotCleanerMode()
+        {
+            RobotCleaner robotCleaner = new RobotCleaner("Robot Cleaner");
+
+            robotCleaner.CleanAction("Mopping");
+            Assert.Equal(robotCleaner.CleanMode, "Mopping");
+        }
+    }
 }
